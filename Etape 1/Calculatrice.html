@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Calculatrice</title>
+    <script src="Calculatrice.js"></script>
+</head>
+<body>
+
+
+    <h1 id="oper"></h1>
+
+    <button onclick="digit_1()" id="un" style="display: inline-block; border-radius: 50%; border: 1px solid #ccc; font-size: 2rem; width: 50px; height: 50px; margin: 5px; cursor: pointer;">1</button>
+    <button onclick="digit_2()" id="deux" style="display: inline-block; border-radius: 50%; border: 1px solid #ccc; font-size: 2rem; width: 50px; height: 50px; margin: 5px; cursor: pointer;">2</button>
+    <button onclick="digit_3()" id="trois" style="display: inline-block; border-radius: 50%; border: 1px solid #ccc; font-size: 2rem; width: 50px; height: 50px; margin: 5px; cursor: pointer;">3</button>
+    <button onclick="digit_4()" id="quatre" style="display: inline-block; border-radius: 50%; border: 1px solid #ccc; font-size: 2rem; width: 50px; height: 50px; margin: 5px; cursor: pointer;">4</button>
+    <button onclick="digit_5()" id="cinq" style="display: inline-block; border-radius: 50%; border: 1px solid #ccc; font-size: 2rem; width: 50px; height: 50px; margin: 5px; cursor: pointer;">5</button>
+    <button onclick="digit_6()" id="six" style="display: inline-block; border-radius: 50%; border: 1px solid #ccc; font-size: 2rem; width: 50px; height: 50px; margin: 5px; cursor: pointer;">6</button>
+    <button onclick="digit_7()" id="sept" style="display: inline-block; border-radius: 50%; border: 1px solid #ccc; font-size: 2rem; width: 50px; height: 50px; margin: 5px; cursor: pointer;">7</button>
+    <button onclick="digit_8()" id="huit" style="display: inline-block; border-radius: 50%; border: 1px solid #ccc; font-size: 2rem; width: 50px; height: 50px; margin: 5px; cursor: pointer;">8</button>
+    <button onclick="digit_9()" id="neuf" style="display: inline-block; border-radius: 50%; border: 1px solid #ccc; font-size: 2rem; width: 50px; height: 50px; margin: 5px; cursor: pointer;">9</button>
+
+    <br><br>
+
+    <button onclick="operator_div()" style="display: inline-block; border-radius: 50%; border: 1px solid #ccc; font-size: 2rem; width: 50px; height: 50px; margin: 5px; cursor: pointer;" id="div">÷</button>
+    <button onclick="operator_times()" style="display: inline-block; border-radius: 50%; border: 1px solid #ccc; font-size: 2rem; width: 50px; height: 50px; margin: 5px; cursor: pointer;" id="times">x</button>
+    <button onclick="operator_less()" id="less" style="display: inline-block; border-radius: 50%; border: 1px solid #ccc; font-size: 2rem; width: 50px; height: 50px; margin: 5px; cursor: pointer;">-</button>
+    <button onclick="operator_more()" id="more" style="display: inline-block; border-radius: 50%; border: 1px solid #ccc; font-size: 2rem; width: 50px; height: 50px; margin: 5px; cursor: pointer;">+</button>
+    <button onclick="operator_modulo()" id="modulo" style="display: inline-block; border-radius: 50%; border: 1px solid #ccc; font-size: 2rem; width: 50px; height: 50px; margin: 5px; cursor: pointer;">%</button>
+
+    <br><br>
+
+    <button onclick="operator_clear()" style="display: inline-block; border-radius: 50%; border: 1px solid #ccc; font-size: 2rem; width: 50px; height: 50px; margin: 5px; cursor: pointer;">C</button>
+    <button onclick="left_bracket()" id="left_bracket" style="display: inline-block; border-radius: 50%; border: 1px solid #ccc; font-size: 2rem; width: 50px; height: 50px; margin: 5px; cursor: pointer;">(</button>
+    <button onclick="right_bracket()" id="right_bracket" style="display: inline-block; border-radius: 50%; border: 1px solid #ccc; font-size: 2rem; width: 50px; height: 50px; margin: 5px; cursor: pointer;">)</button>
+    <button onclick="equal()" id="equal" id="right_bracket" style="display: inline-block; border-radius: 50%; border: 1px solid #ccc; font-size: 2rem; width: 50px; height: 50px; margin: 5px; cursor: pointer;">=</button>
+
+
+    <h1 id="operresult">Résultat : </h1>
+
+
+</body>
+</html>
