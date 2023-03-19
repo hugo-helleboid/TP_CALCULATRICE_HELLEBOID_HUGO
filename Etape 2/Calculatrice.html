@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculatrice</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="Calculatrice.css">
+    <script src="Calculatrice.js"></script>
+</head>
+<body>
+
+    <h1>Calcul ↓</h1>
+
+    <h1 id="operation"></h1> <!-- Ecran pour les opérations -->
+    <!-- Bouton de la calculatrice (chiffre) -->
+
+
+    <button onclick="calculatrice_1.operator('1')" class="button">1</button>
+    <button onclick="calculatrice_1.operator('2')" class="button">2</button>
+    <button onclick="calculatrice_1.operator('3')" class="button">3</button>
+    <button onclick="calculatrice_1.operator('4')" class="button">4</button>
+    <button onclick="calculatrice_1.operator('5')" class="button">5</button>
+    <button onclick="calculatrice_1.operator('6')" class="button">6</button>
+    <button onclick="calculatrice_1.operator('7')" class="button">7</button>
+    <button onclick="calculatrice_1.operator('8')" class="button">8</button>
+    <button onclick="calculatrice_1.operator('9')" class="button">9</button>
+
+    <br/><br/>
+
+    <button onclick="calculatrice_1.operator('/')" class="button">/</button>
+    <button onclick="calculatrice_1.operator('*')" class="button">x</button>
+    <button onclick="calculatrice_1.operator('-')" class="button">-</button>
+    <button onclick="calculatrice_1.operator('+')" class="button">+</button>
+    <button onclick="calculatrice_1.operator('%')" class="button">%</button>
+    <button onclick="calculatrice_1.operator('(')" class="button">(</button>
+    <button onclick="calculatrice_1.operator(')')" class="button">)</button>
+
+    <br/><br/>
+
+    <!-- Bouton égale de la calculatrice suivit du bouton effacer -->
+
+    <button onclick="calculatrice_1.equal()" class="button">=</button>
+    <button onclick="calculatrice_1.operator_clear()" class="button">C</button>
+
+
+    <!-- Affiche le résultat -->
+
+    <h1 id="operation_result"></h1>
+
+
+</body>
+</html>
