@@ -2,23 +2,99 @@
 class calculate{
 
 
+    constructor() {
+
+        this.list_operator = [];
+
+    }
+
+
+
     operator(op) {
 
         let operation = document.getElementById("operation");
         let operationresult = document.getElementById("operation_result");
+        let modification;
+
+
+        operation.textContent = "";
         operationresult.textContent = "";
-        operation.textContent = operation.textContent + op;
+
+        this.list_operator.push(op); 
+
+
+        // Mise à jour du DOM via la liste contenant le nouvelle opérateur
+
+        this.list_operator.forEach(function (valeur) {
+
+            modification = valeur;
+            operation.textContent = operation.textContent + modification;
+
+        });
 
     }
 
 
     operator_clear() {
 
-        let operation = document.getElementById("operation");
-        let modification = operation.textContent;
-        modification = modification.slice(0, -1);
-        operation.textContent = modification;
 
+
+        let operation = document.getElementById("operation");
+        let operationresult = document.getElementById("operation_result");
+        let modification;
+
+
+
+
+        if (this.list_operator.length != 0 && operationresult.textContent == "") { // Pendant le calcul on veut revenir en arrière 
+
+
+            let operation = document.getElementById("operation");
+            let modification;
+
+            operation.textContent = ""; 
+
+
+            this.list_operator.pop(); 
+
+
+            // Mise à jour du DOM avec les élements retirés
+
+
+            this.list_operator.forEach(function (valeur) {
+
+
+                modification = valeur;
+                operation.textContent = operation.textContent + modification;
+
+
+            });
+
+        } else if (operationresult.textContent != "" && operation.textContent == "") { // On a eu le résultat et l'on revient sur l'opération
+
+
+
+            operation.textContent = ""; 
+            operationresult.textContent = "";
+
+       
+            // Réecriture de l'opération ajoutée précèdement 
+
+            this.list_operator.forEach(function (valeur) {
+
+                modification = valeur;
+                operation.textContent = operation.textContent + modification;
+                operationresult.textContent = "";
+
+
+            });
+
+        
+
+
+        }
+
+    
     }
 
 
@@ -38,27 +114,20 @@ class calculate{
 
         } catch (err) {
 
-
-            // En cas d'échec
-
-            //operationresult.textContent = operationresult.textContent + "error";
             operation.textContent = "";
 
         }
-
-
-        //En cas de succès
-
+     
         operationresult.textContent = operationresult.textContent + operation.textContent + " = " + result;
         operation.textContent = "";
     
 
-}
+    }
 
 }
 
 
-let calculatrice_1 = new calculate(); // Ins
+let calculatrice_1 = new calculate(); 
 
 
 
@@ -66,42 +135,4 @@ let calculatrice_1 = new calculate(); // Ins
 
 
 
-/*
-function operation(operateur) {
 
-    let operation = document.getElementById("operation");
-    let operationresult = document.getElementById("operation_result");
-    operationresult.textContent = "";
-    operation.textContent = operation.textContent + operateur;
-
-
-
-}
-
-
-function operator_clear() {
-
-    let operation = document.getElementById("operation");
-    let modification = operation.textContent;
-    modification = modification.slice(0, -1);
-    operation.textContent = modification;
-
-}
-
-
-
-function equal() {
-
-    let operation = document.getElementById("operation");
-    let operationresult = document.getElementById("operation_result");
-    operationresult.textContent = "";
-
-    let result = eval(operation.textContent);
-
-
-    operationresult.textContent = operationresult.textContent + operation.textContent + " = " + result;
-    operation.textContent = "";
-
-}
-
-*/
